@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>rider-mesh.ac</path>
+
+  <effect>
+     <inherits-from>Effects/model-transparent</inherits-from>
+      <object-name>visor</object-name>
+    </effect>
+
+	<!-- De-select when in view 0 -->
+	<animation>
+		<type>select</type>
+		<object-name>head</object-name>
+            <object-name>shell</object-name>
+            <object-name>liner</object-name>
+            <object-name>visor</object-name>
+		<condition>
+			<not>
+				<equals>
+					<property>sim/current-view/view-number</property>
+					<value>0</value>
+				</equals>
+			</not>
+		</condition>
+	</animation>
+
+</PropertyList>
+

@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+
+<!-- FDM for Yamaha YG-1 -->
+
+<airplane mass="181">
+
+  <approach speed="17" aoa="2" fuel="0.8">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.15"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.25"/>
+  </approach>
+
+  <cruise speed="29" alt="1000" fuel="0.8">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.90"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="2.5"/>
+  </cruise>
+
+  <fuselage ax="0.728"  ay="0" az="0.538" bx="-0.98" by="0" bz="0.58" width="0.419" taper="0.46" cy="0.415" cz="0.95"/>
+
+  <wing x="0.12" y="0.25" z="0.7"
+        length="1.47"
+        chord="0.90" 
+        taper="1.0"
+        camber="-0.01"
+        effectiveness="1.4"
+        sweep="4"
+        dihedral="24">
+        <flap0 start="0.1" end="1.0" lift="1.3" drag="1.13"/>
+
+        <control-input axis="/controls/flight/aileron" control="FLAP0" split="true" src0="-1.0" src1="1.0" dst0="-1.46" dst1="1.46"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP0" split="true"/>
+
+        <control-output control="FLAP0" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP0" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+  </wing>
+
+  <mstab x="-0.04" y="0.0" z="0.46"
+         length="0.205"
+         chord="0.8">
+  </mstab>
+
+  <mstab x="-2.0" y="0.0" z="0.40"
+         length="0.95"
+         chord="1.0">
+  </mstab>
+
+ <propeller x="0.05" y="0" z="0.028"
+         radius="7.8"
+         mass="38.0"
+         moment="0.022"
+         blades="6"
+         cruise-alt="1000"
+         cruise-power="6.5"
+	     cruise-speed="29"
+         cruise-rpm="650"
+         gear-ratio="0.10"
+         fine-stop="0.25"
+         coarse-stop="3.0"
+         takeoff-power="11"
+         min-rpm="200"
+         takeoff-rpm="990"
+         contra="1"> 
+  <actionpt x="-0.37" y="0" z="-0.36" />
+  <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
+ <piston-engine eng-rpm="7000"
+                max-torque="6000"
+                eng-power="8.8"
+                displacement="5.6"
+                bore="1.8504"
+                stroke="1.653"
+                min-throttle="0.042"
+                bsfc="0.47" 
+                compression-ratio="8.8"/>
+  <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+  <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
+  <control-speed control="STARTER" transition-time="1.5"/>
+  <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
+  <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>           
+</propeller>
+
+  <tank x="0.10" y="0" z="0.41" capacity="15.0"/>
+
+<!-- frontwheel -->
+
+   <gear x="0.679" y="0.0" z="-0.30"
+        compression="0.134"
+        radius="0.304"
+        moment="-0.37"
+        sfric="0.3"
+        dfric="1.73"
+        spring="10.8"
+        damp="3.8"
+        rebound-damp="2.15">
+        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+        <control-input axis="/controls/flight/aileron" control="STEER" square="true" src0="-1.0" src1="1.0" dst0="-0.6" dst1="0.6"/>
+  </gear>
+
+<!-- rearwheel -->
+
+  <gear x="-0.61" y="0.0" z="-0.297"
+        compression="0.125"
+        radius="0.304"
+        moment="-0.37"
+        sfric="0.3"
+        dfric="1.85"
+        spring="9.0"
+        damp="4.8"
+        rebound-damp="1.85">
+        <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+        <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+  </gear>
+
+ <!-- rider's legs-wheels left -->
+
+  <gear x="-0.602" y="0.43" z="-0.281"
+        compression="0.11"
+        dfric="1.5"
+        spring="2.62"
+        damp="3.28"
+        rebound-damp="2.95">
+       <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-output control="EXTEND" prop="gear/gear[2]/position-norm"/>
+        <control-speed control="EXTEND" transition-time="1"/>  
+  </gear>
+
+       <!-- rider's legs-wheels right -->
+
+  <gear x="-0.602" y="-0.43" z="-0.281"
+        compression="0.11"
+        dfric="1.5"
+        spring="2.62"
+        damp="3.28"
+        rebound-damp="2.95">
+         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-output control="EXTEND" prop="gear/gear[3]/position-norm"/>
+        <control-speed control="EXTEND" transition-time="1"/>
+  </gear>
+
+<!-- oldwheels -->
+
+  <!-- <gear x="0.76" y="0.0" z="-0.41"
+        compression="0.137"
+        radius="0.47"
+        moment="0.14"
+        sfric="0.09"
+        dfric="1.80"
+        spring="6.5"
+        damp="3.5"
+        rebound-damp="2.95">
+        <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
+        <control-input axis="/controls/flight/aileron" control="STEER" square="true" src0="-1.0" src1="1.0" dst0="-0.56" dst1="0.56"/>
+  </gear>
+
+  <gear x="-0.637" y="0.0" z="-0.40"
+        compression="0.125"
+        radius="0.47"
+        moment="0.14"
+        sfric="0.10"
+        dfric="1.75"
+        spring="5.7"
+        damp="3.4">
+        <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
+  </gear>
+
+
+
+  <gear x="-0.52" y="0.453" z="-0.368"
+        compression="0.12"
+        dfric="1.85"
+        spring="3.12"
+        damp="3.18"
+        rebound-damp="2.95">
+       <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-output control="EXTEND" prop="gear/gear[2]/position-norm"/>
+        <control-speed control="EXTEND" transition-time="1"/>
+       <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>  
+  </gear>
+
+
+  <gear x="-0.52" y="-0.453" z="-0.368"
+        compression="0.12"
+        dfric="1.85"
+        spring="3.12"
+        damp="3.18"
+        rebound-damp="2.95">
+         <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+        <control-output control="EXTEND" prop="gear/gear[3]/position-norm"/>
+        <control-speed control="EXTEND" transition-time="1"/>
+    <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+  </gear> -->
+
+  
+       <!-- rider's body mass -->
+
+  <weight x="-0.158" y="0.0" z="0.38" mass-prop="/sim/weight[0]/weight-lb"/>
+ 
+  <ballast x="0.032" y="0" z="-2.03" mass="120"/>
+
+<!-- hitch -->
+
+<hitch name="winch" x="0.78" y="0" z="-0.06">
+	<tow length="40" weight-per-meter="0.3" elastic-constant="10000"  break-force="10000"/>
+	<!-- 4.5mm steel wire-->
+	<winch max-tow-length="40" min-tow-length="1" initial-tow-length="40" max-winch-speed="3" power="120" max-force="2300" />
+	<control-input axis="/controls/winch/place" control="PLACEWINCH"/>
+</hitch>
+
+<hitch name="aerotow" x="0.78" y="0" z="-0.06" force-is-calculated-by-other="0">
+	<tow length="17" weight-per-meter="0.3" elastic-constant="10000" break-force="10000" mp-auto-connect-period="0.0"/>
+	<winch max-tow-length="27" min-tow-length="27" initial-tow-length="27"/>
+	<control-input axis="/controls/aerotow/find-aircraft" control="FINDAITOW"/>
+
+</hitch>
+
+</airplane>

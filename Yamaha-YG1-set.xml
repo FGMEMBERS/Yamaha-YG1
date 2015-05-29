@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+  <sim>
+
+  <description>Yamaha-YG1</description>
+  <author>Lester-Boffo</author>
+  <status>alpha</status>
+  <flight-model>yasim</flight-model>
+  <aero>Yamaha-YG1-yasim</aero>
+
+
+  <virtual-cockpit archive="y">true</virtual-cockpit>
+  <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
+
+  <sound>
+   <path>Aircraft/Yamaha-YG1/Sounds/Yamaha-YG1-sound.xml</path>
+  </sound>
+
+  <model>
+   <path>Aircraft/Yamaha-YG1/Models/YG-1-model.xml</path>
+  </model> 
+
+    <startup>
+	<splash-texture>Aircraft/Ducati-SS50/splash.png</splash-texture>
+   </startup>
+
+
+  <fuel-fraction>1.0</fuel-fraction>
+
+  <systems>
+   <electrical>
+    <path>Aircraft/Generic/generic-electrical.xml</path>
+   </electrical>
+  </systems> 
+ 
+  <virtual-cockpit archive="y">true</virtual-cockpit>
+
+
+
+  <view n="0">
+   <internal archive="y">true</internal>
+   <config>
+    <x-offset-m archive="y" type="double">0.0</x-offset-m>
+    <y-offset-m archive="y" type="double">1.485</y-offset-m>  <!-- up-down -->
+    <z-offset-m archive="y" type="double">0.105</z-offset-m> <!-- fore-back -->
+    <pitch-offset-deg>-15.5</pitch-offset-deg>
+   </config>
+  </view>
+
+  <view n="1">
+   <config>
+    <target-z-offset-m archive="y" type="double">0.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="2">
+   <config>
+    <target-z-offset-m archive="y" type="double">0.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="3">
+   <config>
+    <target-z-offset-m archive="y" type="double">0.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="4">
+   <config>
+    <target-z-offset-m archive="y" type="double">0.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="5">
+   <config>
+    <target-z-offset-m archive="y" type="double">0.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="6">
+   <config>
+    <target-z-offset-m archive="y" type="double">0.0</target-z-offset-m>
+   </config>
+  </view>
+
+  <hud>
+   <enable3d>true</enable3d>
+  </hud>  
+
+    <help>
+    <key>
+      <name>Backspace</name>
+      <desc>clutch-disengage</desc>
+    </key>
+    <key>
+      <name>Home</name>
+      <desc>Shift up</desc>
+    </key>
+    <key>
+      <name>End</name>
+      <desc>Shift down</desc>
+    </key>
+   <key>
+     <name>ctrl+w</name>
+      <desc>set winch 100 meters in front of rider</desc>
+    </key>
+     <key>
+       <name>W</name>
+	 <desc>Toggle winch hook</desc>
+      </key>
+     <key>
+        <name>w</name>
+	  <desc>Increase winch speed</desc>
+      </key>
+      <key>
+        <name>Ctrl-o</name>
+	 <desc>Find aircraft for aerotow</desc>
+      </key>
+      <key>
+        <name>o</name>
+	 <desc>Lock aerotow hook</desc>
+      </key>
+      <key>
+        <name>O</name>
+	 <desc>Open aerotow hook</desc>
+      </key>
+     <key>
+        <name>g or button 2 on joystick</name>
+        <desc>rider's leg lower</desc>
+      </key>
+    <text> ***Yamaha-YG1 riding instructions***
+
+  This Motorcycle is a 1960's era, Japanese made two strokes per engine cycle 80 cc (3.25 cu in )engined road boke.
+  
+**** Riding the Yamaha-YG1 ****
+
+ Left mouse click the right side of the ignition switch bezel 3 times to turn on ignition.  Then left click mouse cursor on kickstarter lever, (to your lower right, near rear wheel), and engine should start. blip throttle to see if running. It steers with  mouse or joystick aileron controls. Throttle is also the same as aircraft.  You have "landing gear' which are actually the rider's feet and these help to keep bike stable on rough ground at slow speeds.  You can add rider weight which helps some with traction.
+
+     !!!!       *************         !!!!
+
+  Don't attempt to steer too fast at speed! You will spin out wildly! You will get stuck in rough terrain if you slide off road in certain terrain areas!
+
+  ****Getting unstuck on rough terrain**** 
+
+   There is included with this model, a winchtow/aerotow function package to get you out of the rough if needed. It uses the same key commands as the FG glider winch and aerotow commands.  The aerotow will require that vehicle you connect to weighs more than your gross weight, and has enough power to pull you out.
+
+  Have fun!
+
+ </text>
+  </help>
+
+ 	<hitches>
+	<!-- make sure some properties do exist, when the list for multiplayer transfere is defined-->
+	<!-- they need to be in the same value, as they are initilized in the FDM, to get the same values after reset
+				    should fix this somehow-->
+			<aerotow>
+				<tow>
+					<length type="float">40</length>
+					<elastic-constant type="float">10000</elastic-constant>
+					<weight-per-m-kg-m type="float">0.3</weight-per-m-kg-m>
+					<dist type="float">1</dist>
+					<connected-to-property-node type="bool"></connected-to-property-node>
+					<brake-force type="float">100000</brake-force>
+					<connected-to-ai-or-mp-callsign type ="string">*</connected-to-ai-or-mp-callsign>
+					<end-force-x type ="float">0</end-force-x>
+					<end-force-y type ="float">0</end-force-y>
+					<end-force-z type ="float">0</end-force-z>
+				</tow>
+				<speed-in-tow-direction type="float">0</speed-in-tow-direction>
+				<open type="bool">true</open>
+				<local-pos-x type="float">0.78</local-pos-x>
+				<local-pos-y type="float">0</local-pos-y>
+				<local-pos-z type="float">-0.06</local-pos-z>
+				<is-slave type="bool">false</is-slave>
+			</aerotow>
+		</hitches>
+
+  	<multiplay>
+	 <generic>
+	  <int n="1" alias="/instrumentation/airspeed-indicator/indicated-speed-kt"/> <!-- speedometer --> 
+	  <int n="2" alias="/controls/engines/engine/magnetos"/> <!-- key switch --> 
+	  <int n="3" alias="/systems/electrical/outputs/instrument-lights"/> <!--turn left--> 
+	  <int n="4" alias="/controls/engines/engine/starter"/> <!-- kickstarter --> 
+	  <float n="5" alias="/controls/gear/brake-left"/> <!-- brake --> 
+	  <int n="6" alias="/controls/gear/brake-right"/> <!-- lamp -->
+	  <float n="7" alias="/controls/engines/engine/throttle"/> <!-- throttle -->
+	  <int n="8" alias="/engines/engine/running"/> <!-- engine -->
+	  <int n="9" alias="/controls/horn/horn"/> <!-- horn -->
+	  <float n="10" alias="/gear/gear[0]/rollspeed-ms"/> <!-- wheel rotation -->
+	  <float n="11" alias="/gear/gear[1]/rollspeed-ms"/> <!-- wheel rotation -->
+	  <float n="12" alias="/gear/gear[0]/compression-norm"/> <!-- wheel supension -->
+	  <float n="13" alias="/gear/gear[1]/compression-norm"/> <!-- wheel supension-->
+	  <float n="14" alias="/controls/flight/aileron"/> <!-- wheel steering -->
+	  <float n="15" alias="/engines/engine/rpm"/> <!-- rpm -->
+        <float n="16" alias="/engines/engine/clutch"/> <!-- clutch -->
+	 </generic>
+	</multiplay>
+
+
+<weight n="0">
+      <name>Pilot</name>
+      <weight-lb>130</weight-lb>
+      <max-lb>190</max-lb>
+      <min-lb>100</min-lb>
+    </weight>
+
+  </sim>
+
+
+	<controls>
+		<winch>
+			<place type="bool">false</place>
+		</winch>
+		<aerotow>
+			<find-aircraft type="bool">false</find-aircraft>
+		</aerotow>
+	</controls>
+
+	<input>
+		<keyboard>
+			<key n="23">
+			<name>Ctrl-w</name>
+			<desc>Place Winch 40m in front of vehicle</desc>
+			<binding>
+				<command>property-assign</command>
+				<property>/controls/winch/place</property>
+				<value type="bool">true</value>
+			</binding>
+			<mod-up>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/winch/place</property>
+					<value type="bool">false</value>
+				</binding>
+			</mod-up>
+			</key>
+			<key n="87">
+				<name>W</name>
+				<desc>Toggle winch hook</desc>
+				<binding>
+					<command>nasal</command>
+					<script>
+						var p = "/sim/hitches/winch/open";
+						setprop(p, !getprop(p));
+					</script>
+				</binding>
+			</key>
+			<key n="119">
+				<name>w</name>
+				<desc>Increase winch speed</desc>
+				<binding>
+					<command>nasal</command>
+					<script>interpolate("/sim/hitches/winch/winch/rel-speed", 1.0, 2)</script>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>nasal</command>
+						<script>interpolate("/sim/hitches/winch/winch/rel-speed", 0.0, 2)</script>
+					</binding>
+				</mod-up>
+			</key>
+			<key n="15">
+				<name>Ctrl-o</name>
+				<desc>Find aircraft for aerotow</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>/controls/aerotow/find-aircraft</property>
+					<value type="bool">true</value>
+				</binding>
+				<mod-up>
+					<binding>
+						<command>property-assign</command>
+						<property>/controls/aerotow/find-aircraft</property>
+						<value type="bool">false</value>
+					</binding>
+				</mod-up>
+			</key>
+			<key n="111">
+				<name>o</name>
+				<desc>Lock aerotow hook</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>/sim/hitches/aerotow/open</property>
+					<value type="bool">false</value>
+				</binding>
+			</key>
+			<key n="79">
+				<name>O</name>
+				<desc>Open aerotow hook</desc>
+				<binding>
+					<command>property-assign</command>
+					<property>/sim/hitches/aerotow/open</property>
+					<value type="bool">true</value>
+				</binding>
+			</key>
+		</keyboard>
+	</input>
+
+
+</PropertyList>
+

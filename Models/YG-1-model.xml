@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>whygee-one.ac</path>
+
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <object-name>speedometer-glass</object-name>
+    <object-name>headlightlens</object-name>
+  </effect>
+
+
+ <!-- rider figure -->
+
+    <model>
+    <path>Aircraft/Yamaha-YG1/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m>  0.49 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.49 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Rembrandt lighting effects -->
+
+   <model>
+    <path>Aircraft/Yamaha-YG1/Models/Lights/HeadLight.xml</path>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+    <offsets>
+      <x-m> -0.62 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.55 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -3 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Yamaha-YG1/Models/Lights/HeadLight-rembrandt.xml</path>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <offsets>
+       <x-m> -0.62 </x-m>
+       <y-m>  0.000 </y-m>
+       <z-m>  0.55 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -4 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Yamaha-YG1/Models/Lights/TailLight.xml</path>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+    <offsets>
+      <x-m> 0.898 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m>  0.43 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Yamaha-YG1/Models/Lights/TailLight-rembrandt.xml</path>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <offsets>
+      <x-m> 0.898 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m>  0.43 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+
+ <!-- handlebars-steering -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>frontwheel</object-name>
+  <object-name>front-fender</object-name>
+  <object-name>forklowers</object-name>
+  <object-name>fr-forks</object-name>
+  <object-name>handleclampbolts</object-name>
+  <object-name>FR-brakeplate</object-name>
+  <object-name>bar-cables</object-name>
+  <object-name>handlebars</object-name>
+  <object-name>left-grip</object-name>
+  <object-name>throttlegrip</object-name>
+  <object-name>clutchlever-base</object-name>
+  <object-name>clutchlever</object-name>
+  <object-name>frontbrakelever-base</object-name>
+  <object-name>frontbrakelever</object-name>
+  <object-name>headlight-mounts</object-name>
+  <object-name>headlightreflector</object-name>
+  <object-name>headlight-housing</object-name>
+  <object-name>headlight-bezel</object-name>
+  <object-name>headlight-lens</object-name>
+  <object-name>speedometer-bezel</object-name>
+  <object-name>speedometerglass</object-name>
+  <object-name>speedo-face</object-name>
+  <object-name>needle</object-name>
+  <object-name>speedometer-glass</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>-37</factor>
+  <center>
+   <x-m>-0.383</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.495</z-m>
+  </center>
+  <axis>
+   <x>0.4243</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+<!-- wheel brakes -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>frontbrakelever</object-name>
+    <property>controls/gear/brake-left</property>
+    <factor> 24 </factor>
+    <center>
+   <x-m>-0.31</x-m>
+   <y-m> 0.28</y-m>
+   <z-m>0.72</z-m>
+  </center>
+    <axis>
+      <x> -0.0682 </x>
+      <y> 0.0407 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>clutchlever</object-name>
+    <property>engines/engine/clutch</property>
+    <factor> -24 </factor>
+    <center>
+   <x-m>-0.31</x-m>
+   <y-m> -0.28</y-m>
+   <z-m>0.72</z-m>
+  </center>
+    <axis>
+      <x> -0.0682 </x>
+      <y> -0.0407 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+   <animation>
+    <type>rotate</type>
+    <object-name>rear-brakelever</object-name>
+    <property>controls/gear/brake-right</property>
+    <factor> -8 </factor>
+    <center>
+   <x-m> 0.1797</x-m>
+   <y-m>0.12</y-m>
+   <z-m> -0.074</z-m>
+  </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+<animation>
+    <type>select</type>
+    <object-name>brakelight</object-name>
+    <condition>
+      <greater-than>
+          <property>controls/gear/brake-right</property>
+          <value> 0.1 </value>
+        </greater-than>
+    </condition>
+  </animation>
+
+   <animation>
+    <type>material</type>
+     <object-name>brakelight</object-name>
+    <emission>
+      <red>   0.98 </red>
+      <green> 0.98 </green>
+      <blue>  0.98 </blue>
+      <property>controls/gear/brake-right</property>
+          <value> 0.1 </value>
+    </emission>
+  </animation>
+
+
+<!-- throttle -->
+ 
+<animation>
+  <type>rotate</type>
+  <object-name>throttlegrip</object-name>
+  <property>/controls/engines/engine/throttle</property>
+  <factor>95</factor>
+  <center>
+	<x-m> -0.265 </x-m>
+	<y-m> 0.347 </y-m>
+	<z-m> 0.728 </z-m>
+  </center>
+ <axis>
+   <x>0.4887</x>
+   <y>1</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ 
+ <animation>
+  <type>translate</type>
+    <object-name>front-fender</object-name>
+    <object-name>forklowers</object-name>
+    <object-name>FR-brakeplate</object-name>
+    <object-name>frontwheel</object-name>
+  <property>gear/gear[0]/compression-norm</property>
+  <interpolation>
+    <entry><ind>0.0</ind><dep>-0.02</dep></entry>
+    <entry><ind>0.40</ind><dep>0.03.5</dep></entry>
+    <entry><ind>0.78</ind><dep>0.07</dep></entry>
+    <entry><ind>1.0</ind><dep>0.125</dep></entry>
+  </interpolation>  
+  <center>
+   <x-m> -0.57</x-m>
+   <y-m> 0.00</y-m>
+   <z-m>0.241</z-m>
+  </center>
+  <axis>
+   <x>0.4243</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+    <object-name>rear-swingarm</object-name>
+    <object-name>chaincase</object-name>
+    <object-name>lowershock-bodies</object-name>
+    <object-name>rearwheel</object-name>
+    <object-name>rear-brakeplate</object-name>
+  <property>gear/gear[1]/compression-norm</property>
+  <interpolation>
+    <entry><ind>0.0</ind><dep>1.75</dep></entry>
+    <entry><ind>0.30</ind><dep>-1.75</dep></entry>
+    <entry><ind>0.66</ind><dep>-5</dep></entry>
+    <entry><ind>1.0</ind><dep>-11</dep></entry>
+  </interpolation>  
+  <center>
+   <x-m> 0.1975</x-m>
+   <y-m> 0.00</y-m>
+   <z-m>0.03</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <animation>
+  <type>rotate</type>
+   <object-name>lowershock-bodies</object-name>
+  <property>gear/gear[1]/compression-norm</property>
+  <interpolation>
+    <entry><ind>0.0</ind><dep>-1.75</dep></entry>
+    <entry><ind>0.30</ind><dep>1.75</dep></entry>
+    <entry><ind>0.66</ind><dep>5</dep></entry>
+    <entry><ind>1.0</ind><dep>11</dep></entry>
+  </interpolation>  
+  <center>
+   <x-m> 0.553</x-m>
+   <y-m> 0.00</y-m>
+   <z-m>0.10</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <!-- kickstarter -->
+
+<animation>
+   <type>pick</type>
+   <object-name>kickstarter</object-name>
+   <visible>true</visible>
+   <action>
+     <name>start</name>
+     <button>0</button>
+     <binding>
+       <command>property-assign</command>
+       <property>/controls/engines/engine/starter</property>
+       <value>true</value>
+     </binding>
+     <mod-up>
+       <binding>
+         <command>property-assign</command>
+         <property>/controls/engines/engine/starter</property>
+         <value>0</value>
+       </binding>
+     </mod-up>
+   </action>
+  </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>kickstarter</object-name>
+  <object-name>kickstarter-pedal</object-name>
+  <property>/controls/engines/engine/starter</property>
+   <interpolation>
+    <entry><ind>0.0</ind><dep>0.0</dep></entry>
+    <entry><ind>0.20</ind><dep>103</dep></entry>
+    <entry><ind>1.0</ind><dep>103</dep></entry>
+   </interpolation> 
+  <center>
+      <x-m>  0.12 </x-m>
+	<y-m> 0.097 </y-m>
+	<z-m> -0.016 </z-m>
+  </center>
+ <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+  <animation>
+  <type>rotate</type>
+  <object-name>kickstarter-pedal</object-name>
+  <property>/controls/engines/engine/starter</property>
+    <interpolation>
+    <entry><ind>0.0</ind><dep>0.0</dep></entry>
+    <entry><ind>0.030</ind><dep>-90</dep></entry>
+    <entry><ind>1.0</ind><dep>-90</dep></entry>
+  </interpolation> 
+  <center>
+	<x-m>  0.18 </x-m>
+	<y-m> 0.1252 </y-m>
+	<z-m> 0.157 </z-m>
+  </center>
+ <axis>
+   <x>0.2617</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+
+<!-- Wheel rollspeed -->
+
+ <animation>
+  <object-name>frontwheel</object-name>
+  <property>gear/gear[0]/rollspeed-ms</property>
+  <type>spin</type>
+  <factor>24</factor>
+  <center>
+   <x-m> -0.6756</x-m>
+   <y-m> 0.0</y-m>
+   <z-m>0.001</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <object-name>rearwheel</object-name>
+  <property>gear/gear[1]/rollspeed-ms</property>
+  <type>spin</type>
+  <factor>24</factor>
+  <center>
+   <x-m> 0.6284</x-m>
+   <y-m> 0.0</y-m>
+   <z-m>0.008</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>-1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <!-- speedometer anim -->
+
+<!-- <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+   <object-name>clampbolts</object-name>
+  <object-name>muffler</object-name>
+  <object-name>exhaust-headpipe</object-name>
+  <object-name>handlebars</object-name>
+  <object-name>muffler-mount</object-name>
+  <object-name>headlightreflector</object-name>
+  <object-name>headlight-bezel</object-name>
+  <object-name>speedometer-bezel</object-name>
+  <object-name>taillight-bezel</object-name>
+  <object-name>taillight-bracket</object-name>
+  </animation> -->
+
+  <animation>
+    <type>material</type>
+     <object-name>speedo-face</object-name>
+     <object-name>needle</object-name>
+    <emission>
+      <red>   0.48 </red>
+      <green> 0.48 </green>
+      <blue>  0.48 </blue>
+      <factor-prop>/engines/engine/running</factor-prop>
+       <value>0.2</value>
+    </emission>
+  </animation>
+
+  <animation> 
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <interpolation>
+      <entry><ind>  0.00</ind><dep>0</dep></entry>
+      <entry><ind> 39.30</ind><dep>72</dep></entry>
+      <entry><ind>78.60</ind><dep>144</dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -0.470 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0.632 </z-m>  
+    </center>
+    <axis> 
+      <x> -0.4188 </x>
+      <y> 0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+  <!-- magneto switch -->
+<!-- 3D and image files borrowed from Helijah's Socata ST-10 instruments -->
+
+  <animation>
+    <type>pick</type>
+    <object-name>click-L</object-name>
+    <visible>false</visible>
+    <action>
+      <name>decrease mags</name>
+      <button>0</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/engines/engine/magnetos</property>
+        <step>-1</step>
+        <min>0</min>
+        <max>3</max>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
+    <type>pick</type>
+    <object-name>click-R</object-name>
+    <visible>false</visible>
+    <action>
+      <name>increase mags</name>
+      <button>0</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>/controls/engines/engine/magnetos</property>
+        <step>1</step>
+        <min>0</min>
+        <max>3</max>
+      </binding>
+    </action>
+  </animation>
+
+  <!--   key animations  --> 
+
+  <animation>
+    <name>mags-key</name>
+    <type>rotate</type>
+    <object-name>key</object-name>
+    <property>/controls/engines/engine/magnetos</property>
+    <factor> 60 </factor>
+    <center>
+      <x-m> -0.39 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0.7351 </z-m>  
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+

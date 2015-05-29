@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ########################################
+
+ # 
+ # April 2012 : Modified by PAF team
+ # http://equipe-flight-plategear.forumactif.com
+
+##########################################-->
+
+<PropertyList>
+  <path>Lights.ac</path>
+   <nopreview/>
+
+  <animation>
+    <type>select</type>
+     <object-name>light-volume</object-name>
+    <!--<object-name>red-light-plate</object-name>-->
+    <object-name>green-light-plate</object-name>
+    <object-name>white-light-plate</object-name>
+    <object-name>blue-light-plate</object-name>
+    <object-name>lnd-light-plate</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>red-light-plate</object-name>
+    <object-name>green-light-plate</object-name>
+    <object-name>white-light-plate</object-name>
+    <object-name>blue-light-plate</object-name>
+  </animation>
+
+  <animation>
+    <type>alpha-test</type>
+    <alpha-factor>0.01</alpha-factor>
+  </animation>
+
+  <animation>
+    <type>billboard</type>
+    <object-name>red-light-plate</object-name>
+    <object-name>green-light-plate</object-name>
+    <object-name>white-light-plate</object-name>
+    <object-name>blue-light-plate</object-name>
+    <spherical type="bool">true</spherical>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>red-light-plate</object-name>
+    <condition>
+      <and>
+        <property>sim/multiplay/generic/int[6]</property>
+        <greater-than>
+          <property>sim/multiplay/generic/int[8]</property>
+          <value>0.2</value>
+        </greater-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>red-light-plate</object-name>
+    <object-name>green-light-plate</object-name>
+    <object-name>white-light-plate</object-name>
+    <object-name>blue-light-plate</object-name>
+    <emission>
+      <red>   0.27 </red>
+      <green> 0.27 </green>
+      <blue>  0.27 </blue>
+      <factor-prop>sim/multiplay/generic/int[5]</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>dist-scale</type>
+    <object-name>red-light-plate</object-name>
+    <interpolation>
+      <entry><ind>    0 </ind><dep> 0.25 </dep></entry>
+      <entry><ind>   20 </ind><dep> 0.50 </dep></entry>
+      <entry><ind> 1500 </ind><dep> 5.00 </dep></entry>
+    </interpolation>
+  </animation>
+
+</PropertyList>
