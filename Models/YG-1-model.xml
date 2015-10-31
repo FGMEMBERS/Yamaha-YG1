@@ -38,7 +38,7 @@
       <y-m>  0.000 </y-m>
       <z-m>  0.55 </z-m>
       <roll-deg>    0 </roll-deg>
-      <pitch-deg> -3 </pitch-deg>
+      <pitch-deg> -0.5 </pitch-deg>
       <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
@@ -53,7 +53,7 @@
        <y-m>  0.000 </y-m>
        <z-m>  0.55 </z-m>
       <roll-deg>    0 </roll-deg>
-      <pitch-deg> -4 </pitch-deg>
+      <pitch-deg> -0.5 </pitch-deg>
       <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
@@ -377,9 +377,9 @@
   <type>spin</type>
   <factor>24</factor>
   <center>
-   <x-m> -0.6756</x-m>
+   <x-m> -0.6698</x-m>
    <y-m> 0.0</y-m>
-   <z-m>0.001</z-m>
+   <z-m>-0.005589</z-m>
   </center>
   <axis>
    <x>0</x>
@@ -394,9 +394,9 @@
   <type>spin</type>
   <factor>24</factor>
   <center>
-   <x-m> 0.6284</x-m>
+   <x-m> 0.6253</x-m>
    <y-m> 0.0</y-m>
-   <z-m>0.008</z-m>
+   <z-m>0.00212</z-m>
   </center>
   <axis>
    <x>0.0</x>

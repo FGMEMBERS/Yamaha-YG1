@@ -16,6 +16,8 @@
     <type>select</type>
     <!--<object-name>light-volume</object-name>-->
     <object-name>red-light-plate</object-name>
+    <object-name>Cone</object-name>
+    <object-name>Cone-texture</object-name>
     <object-name>green-light-plate</object-name>
     <object-name>white-light-plate</object-name>
     <object-name>blue-light-plate</object-name>
@@ -30,6 +32,8 @@
     <object-name>white-light-plate</object-name>
     <object-name>blue-light-plate</object-name>
     <object-name>amber-light-plate</object-name>
+    <object-name>Cone</object-name>
+    <object-name>Cone-texture</object-name>
   </effect>
 
   <animation>
@@ -39,6 +43,8 @@
     <object-name>white-light-plate</object-name>
     <object-name>blue-light-plate</object-name>
     <object-name>amber-light-plate</object-name>
+    <object-name>Cone</object-name>
+    <object-name>Cone-texture</object-name>
   </animation>
 
   <animation>

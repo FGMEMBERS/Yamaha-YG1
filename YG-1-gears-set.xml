@@ -130,6 +130,10 @@
 
   <help>
     <key>
+      <name>backspace</name>
+      <desc>Clutch</desc>
+    </key>
+    <key>
       <name>Home</name>
       <desc>Shift up</desc>
     </key>
@@ -139,7 +143,11 @@
     </key>
     <key>
       <name>l/L</name>
-      <desc>Switch head lights on/off</desc>
+      <desc>Switch instrument lights on/off</desc>
+    </key>
+	    <key>
+      <name>k/K</name>
+      <desc>Switch headlights on/off</desc>
     </key>
     <key>
 	<name>s</name>
@@ -525,6 +533,15 @@
        <binding>
         <command>property-toggle</command>
         <property>controls/lighting/headlamp</property>
+	 </binding>
+ 	</key> 
+	
+	<key n="108">
+       <name>l</name>
+       <desc>Instruments</desc>
+       <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/instruments</property>
 	 </binding>
  	</key> 
 	

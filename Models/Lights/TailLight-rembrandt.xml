@@ -21,6 +21,8 @@
     <object-name>blue-light-plate</object-name>
     <object-name>lnd-light-plate</object-name>
     <object-name>amber-light-plate</object-name>
+    <object-name>Cone</object-name>
+    <object-name>Cone-texture</object-name>
   </animation>
 
   <effect>

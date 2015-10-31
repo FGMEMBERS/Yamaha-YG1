@@ -14,6 +14,8 @@
 
   <animation>
     <type>select</type>
+    <object-name>Cone</object-name>
+    <object-name>Cone-texture</object-name>
     <!--<object-name>light-volume</object-name>-->
     <object-name>red-light-plate</object-name>
     <object-name>green-light-plate</object-name>
@@ -85,12 +87,12 @@
     <direction>
       <x> -1.0 </x>
       <y>  0.000 </y>
-      <z>  -0.0825 </z>
+      <z>  -0.04225 </z>
     </direction>
     <ambient>
-      <r>  0.3 </r>
-      <g>  0.3 </g>
-      <b>  0.3 </b>
+      <r>  0.53 </r>
+      <g>  0.53 </g>
+      <b>  0.53 </b>
       <a>  1.0 </a>
     </ambient>
     <diffuse>
@@ -120,9 +122,9 @@
       <q>  0.002 </q>
     </attenuation>
     <exponent> 24.0 </exponent>
-    <cutoff>   60.0 </cutoff>
+    <cutoff>   90.0 </cutoff>
     <near-m>    0.5 </near-m>
-    <far-m>   40.0 </far-m>
+    <far-m>   108.0 </far-m>
   </animation>
 
   <!-- <animation>
@@ -143,9 +145,9 @@
   <animation>
     <type>scale</type>
     <object-name>light-volume</object-name>
-    <x-offset> 2.75 </x-offset>
-    <y-offset> 0.5 </y-offset>
-    <z-offset> 0.35 </z-offset>
+    <x-offset> 17.25 </x-offset>
+    <y-offset> 4.95 </y-offset>
+    <z-offset> 2.95 </z-offset>
   </animation>
 
 </PropertyList>

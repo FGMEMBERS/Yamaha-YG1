@@ -21,11 +21,16 @@
     <object-name>blue-light-plate</object-name>
     <object-name>amber-light-plate</object-name>
     <!--<object-name>lnd-light-plate</object-name>-->
+    <!-- <object-name>Cone</object-name> -->
+    <!-- <object-name>Cone-texture</object-name> -->
+
   </animation>
 
   <animation>
     <type>select</type>
     <object-name>lnd-light-plate</object-name>
+    <object-name>Cone</object-name>
+    <object-name>Cone-texture</object-name>
     <condition>
       <and>
         <property>sim/multiplay/generic/int[6]</property>
@@ -37,9 +42,22 @@
     </condition>
   </animation>
 
+   <animation>
+     <type>select</type> 
+    <object-name>Cone-texture</object-name>
+    <condition>		
+     <greater-than>		
+       <property>/sim/time/sun-angle-rad</property>
+      <value>1.57</value>
+      </greater-than>
+     </condition>
+  </animation>
+
   <animation>
     <type>material</type>
     <object-name>lnd-light-plate</object-name>
+    <object-name>Cone</object-name>
+    <object-name>Cone-texture</object-name>
     <emission>
       <red>   0.97 </red>
       <green> 0.97 </green>

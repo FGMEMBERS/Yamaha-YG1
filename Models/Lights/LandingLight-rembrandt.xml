@@ -14,6 +14,8 @@
 
   <animation>
     <type>select</type>
+    <object-name>Cone</object-name>
+    <object-name>Cone-texture</object-name>
     <!--<object-name>light-volume</object-name>-->
     <object-name>red-light-plate</object-name>
     <object-name>green-light-plate</object-name>
