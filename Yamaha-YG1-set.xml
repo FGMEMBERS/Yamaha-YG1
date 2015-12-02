@@ -24,9 +24,9 @@
   </model> 
 
     <startup>
-	<splash-texture>Aircraft/Splashs/YG-1-splash.png</splash-texture>
+	<splash-texture>Aircraft/Splash/YG-1-splash.png</splash-texture>
 
-<splash-texture>Aircraft/Splashs/YG-1-splash1.png</splash-texture>   
+<splash-texture>Aircraft/Splash/YG-1-splash1.png</splash-texture>   
 </startup>
 
 
