@@ -24,8 +24,10 @@
   </model> 
 
     <startup>
-	<splash-texture>Aircraft/Ducati-SS50/splash.png</splash-texture>
-   </startup>
+	<splash-texture>Aircraft/Splashs/YG-1-splash.png</splash-texture>
+
+<splash-texture>Aircraft/Splashs/YG-1-splash1.png</splash-texture>   
+</startup>
 
 
   <fuel-fraction>1.0</fuel-fraction>
@@ -301,4 +303,3 @@
 
 
 </PropertyList>
-
